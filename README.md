@@ -10,7 +10,13 @@
 
 # node-red-contrib-iiot-opcua
 
-DEPRECATED AND CLOSED since April 2020
+
+The original version of this code was DEPRECATED AND CLOSED since April 2020 by the Author 
+He also took the unusual step of Deleting the repo from his github account.
+
+As the BSD-Clause 3 Licence allows re-hosting, I have uploaded the code here
+
+
 
 ## The IoT/IIoT OPC UA toolbox package for [Node-RED][8] based on [node-opcua][9].
 
