@@ -1,0 +1,16 @@
+{
+  "opcua-iiot-contrib": {
+    "label": {
+      "connector": "Connector",
+      "showActivities": "Show Activities",
+      "showErrors": "Show Errors",
+      "attributeId": "Attribute Id",
+      "maxAge": "Max. Age",
+      "depth": "Depth",
+      "justValue": "Send Just Values",
+      "parseStrings": "Parse Result",
+      "historyDays": "History Days",
+      "serverMaxItemsToRead": "Server Max. To Read"
+    }
+  }
+}

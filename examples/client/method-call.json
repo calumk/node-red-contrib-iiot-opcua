@@ -1,0 +1,276 @@
+[
+  {
+    "id": "3118d8d7.c7e91",
+    "type": "tab",
+    "label": "IIoT OPC UA Method Call",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "f68053d4.08dc6",
+    "type": "debug",
+    "z": "3118d8d7.c7e91",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "true",
+    "x": 810,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "d48a0e23.4ab278",
+    "type": "OPCUA-IIoT-Method-Caller",
+    "z": "3118d8d7.c7e91",
+    "connector": "ae72fc9e.f521f8",
+    "objectId": "ns=1;i=1234",
+    "methodId": "ns=1;i=12345",
+    "methodType": "basic",
+    "value": "",
+    "justValue": false,
+    "name": "",
+    "showStatusActivities": false,
+    "showErrors": true,
+    "inputArguments": [
+      {
+        "name": "barks",
+        "dataType": "UInt32",
+        "value": "3"
+      },
+      {
+        "name": "volume",
+        "dataType": "UInt32",
+        "value": "6"
+      }
+    ],
+    "x": 580,
+    "y": 180,
+    "wires": [
+      [
+        "f68053d4.08dc6",
+        "928a3d1d.05bf48",
+        "53a3842f.0c7fcc",
+        "619fd732.5db74",
+        "1fd82ec0.7786f9"
+      ]
+    ]
+  },
+  {
+    "id": "255a4521.cd2092",
+    "type": "OPCUA-IIoT-Inject",
+    "z": "3118d8d7.c7e91",
+    "injectType": "inject",
+    "payload": "",
+    "payloadType": "date",
+    "topic": "",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "startDelay": "",
+    "name": "",
+    "addressSpaceItems": [],
+    "x": 140,
+    "y": 180,
+    "wires": [
+      [
+        "d48a0e23.4ab278"
+      ]
+    ]
+  },
+  {
+    "id": "28dac1d7.0e7716",
+    "type": "inject",
+    "z": "3118d8d7.c7e91",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 140,
+    "y": 240,
+    "wires": [
+      [
+        "9df748df.2a4688"
+      ]
+    ]
+  },
+  {
+    "id": "9df748df.2a4688",
+    "type": "function",
+    "z": "3118d8d7.c7e91",
+    "name": "bark 6 times with volume 12",
+    "func": "msg.payload = {\n    objectId: 'ns=1;i=1234',\n    methodId: 'ns=1;i=12345',\n    inputArguments: [\n        {name: 'barks', dataType:'UInt32', value:'6'},\n        {name: 'volume', dataType:'UInt32', value:'12'}\n    ],\n    methodType: 'basic'\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 340,
+    "y": 240,
+    "wires": [
+      [
+        "d48a0e23.4ab278"
+      ]
+    ]
+  },
+  {
+    "id": "898f8c10.d99ea8",
+    "type": "comment",
+    "z": "3118d8d7.c7e91",
+    "name": "Information",
+    "info": "If you have none OPC UA server on other tabs, \nplease drag&drop an OPC UA Server \nfrom the package nodes on this tab!",
+    "x": 150,
+    "y": 120,
+    "wires": []
+  },
+  {
+    "id": "928a3d1d.05bf48",
+    "type": "debug",
+    "z": "3118d8d7.c7e91",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "x": 830,
+    "y": 120,
+    "wires": []
+  },
+  {
+    "id": "53a3842f.0c7fcc",
+    "type": "OPCUA-IIoT-Response",
+    "z": "3118d8d7.c7e91",
+    "name": "",
+    "compressStructure": true,
+    "showStatusActivities": false,
+    "showErrors": false,
+    "activateUnsetFilter": false,
+    "activateFilters": false,
+    "negateFilter": false,
+    "filters": [],
+    "x": 830,
+    "y": 180,
+    "wires": [
+      [
+        "db6786a4.18c96"
+      ]
+    ]
+  },
+  {
+    "id": "db6786a4.18c96",
+    "type": "debug",
+    "z": "3118d8d7.c7e91",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "x": 1030,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "619fd732.5db74",
+    "type": "OPCUA-IIoT-Response",
+    "z": "3118d8d7.c7e91",
+    "name": "",
+    "compressStructure": true,
+    "showStatusActivities": false,
+    "showErrors": false,
+    "activateUnsetFilter": true,
+    "activateFilters": false,
+    "negateFilter": false,
+    "filters": [],
+    "x": 840,
+    "y": 300,
+    "wires": [
+      [
+        "e913744b.674ef8"
+      ]
+    ]
+  },
+  {
+    "id": "e913744b.674ef8",
+    "type": "debug",
+    "z": "3118d8d7.c7e91",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "x": 1030,
+    "y": 300,
+    "wires": []
+  },
+  {
+    "id": "1fd82ec0.7786f9",
+    "type": "OPCUA-IIoT-Response",
+    "z": "3118d8d7.c7e91",
+    "name": "",
+    "compressStructure": false,
+    "showStatusActivities": false,
+    "showErrors": false,
+    "activateUnsetFilter": true,
+    "activateFilters": false,
+    "negateFilter": false,
+    "filters": [],
+    "x": 830,
+    "y": 240,
+    "wires": [
+      [
+        "d34c9413.2adba8"
+      ]
+    ]
+  },
+  {
+    "id": "d34c9413.2adba8",
+    "type": "debug",
+    "z": "3118d8d7.c7e91",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "x": 1030,
+    "y": 240,
+    "wires": []
+  },
+  {
+    "id": "3572ebfa.8aef2c",
+    "type": "comment",
+    "z": "3118d8d7.c7e91",
+    "name": "Response does not support all for methods",
+    "info": "",
+    "x": 930,
+    "y": 360,
+    "wires": []
+  },
+  {
+    "id": "ae72fc9e.f521f8",
+    "type": "OPCUA-IIoT-Connector",
+    "z": "",
+    "discoveryUrl": "",
+    "endpoint": "opc.tcp://localhost:55388/UA/NodeREDIIoTServer",
+    "keepSessionAlive": true,
+    "loginEnabled": false,
+    "securityPolicy": "Basic256",
+    "securityMode": "SIGN",
+    "name": "LOCAL DEMO SERVER",
+    "showErrors": false,
+    "publicCertificateFile": "",
+    "privateKeyFile": "",
+    "defaultSecureTokenLifetime": "60000",
+    "endpointMustExist": false,
+    "autoSelectRightEndpoint": false,
+    "strategyMaxRetry": "",
+    "strategyInitialDelay": "",
+    "strategyMaxDelay": "",
+    "strategyRandomisationFactor": "",
+    "requestedSessionTimeout": "",
+    "connectionStartDelay": "",
+    "reconnectDelay": ""
+  }
+]
