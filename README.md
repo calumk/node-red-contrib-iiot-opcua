@@ -12,12 +12,14 @@
 
 
 
-**The original version of this code was DEPRECATED AND CLOSED since April 2020 by the Author **
-**He also took the unusual step of deleting the repo from his github account, which has caused some issues **
+**The original version of this code was DEPRECATED AND CLOSED since April 2020 by the Author**
 
-**As the BSD-Clause 3 Licence allows re-distribution, I have uploaded the code here, for future archive **
 
-**I am NOT maintaining or updating this code, I will not be accepting Issues, or Pull Requests - If someone would like to take that on, then please fork this repo **
+**He also took the unusual step of deleting the repo from his github account, which has caused some issues**
+
+**As the BSD-Clause 3 Licence allows re-distribution, I have uploaded the code here, for archive purposes**
+
+**I am NOT maintaining or updating this code, - If someone would like to take that on, then please fork this repo**
 
 
 ## The IoT/IIoT OPC UA toolbox package for [Node-RED][8] based on [node-opcua][9].
