@@ -11,15 +11,21 @@
 # node-red-contrib-iiot-opcua
 
 
+---
+---
+#Please Read
 
 **The original version of this code was DEPRECATED AND CLOSED since April 2020 by the Author**
 
 
-**He also took the unusual step of deleting the repo from his github account, which has caused some issues**
+They also took the unusual step of deleting the repo from their github account, and npm, which has caused some issues, with projects that replied upon this repo.
 
-**As the BSD-Clause 3 Licence allows re-distribution, I have uploaded the code here, for archive purposes**
+As the BSD-Clause 3 Licence allows re-distribution, I have uploaded the code here, for archive purposes
 
-**I am NOT maintaining or updating this code, - If someone would like to take that on, then please fork this repo**
+**I am NOT maintaining or updating this code** - If someone would like to take that on, then please fork this repo, and if it is improved upon, please let me know so I can link to it here.
+
+---
+---
 
 
 ## The IoT/IIoT OPC UA toolbox package for [Node-RED][8] based on [node-opcua][9].
